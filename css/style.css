@@ -7,6 +7,7 @@
    --accent-color-hover: #FFAB6A;
    --accent-color-light: #ffeee2;
    --ligth-bg: #F6F8FD;
+   --deivder-bg: #E4E9F2;
 }
 
 * {
@@ -38,10 +39,12 @@ body {
    line-height: 26px;
    color: var(--text-color);
    background-image: #fff;
+   font-weight: 400;
+   transition: all 0.4s ease;
 }
 
 .container {
-   max-width: 1110px;
+   max-width: 1200px;
    width: 100%;
    margin: 0 auto;
 }
@@ -49,3 +52,65 @@ body {
 .main__content {
    flex-grow: 1;
 }
+
+.logo:hover {
+   opacity: 0.8;
+}
+
+.logo:active {
+   opacity: 0.6;
+}
+
+
+/* Header starts */
+.site-header {
+}
+
+.site-header__container {
+   display: flex;
+   align-items: center;
+   border-bottom: 1px solid var(--deivder-bg);
+}
+
+.site-header__logo {
+   flex-shrink: 0;
+   margin-right: 56px;
+}
+
+.site-header__sitenav {
+   margin-right: auto;
+}
+
+.sitenav__list {
+   display: flex;
+   align-items: center;
+   column-gap: 32px;
+}
+
+.sitenav__item {
+   padding: 41px 0 45px 0;
+   position: relative;
+}
+
+.sitenav__link {
+   display: block;
+   font-size: 15px;
+   color: var(--text-color);
+}
+
+.sitenav__link:hover {
+   color: var(--text-color-dark);
+}
+
+.sitenav__link:hover::after {
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 4px;
+   background-color: var(--accent-color);
+}
+
+
+/* Header ends */
