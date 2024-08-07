@@ -1,3 +1,14 @@
+@import 'fonts.css';
+
+:root {
+   --text-color: #69707D;
+   --text-color-dark: #1D2026;
+   --accent-color: #FF7E1B;
+   --accent-color-hover: #FFAB6A;
+   --accent-color-light: #ffeee2;
+   --ligth-bg: #F6F8FD;
+}
+
 * {
    margin: 0;
    padding: 0;
@@ -22,13 +33,15 @@ body {
    display: flex;
    flex-direction: column;
    height: 100%;
-   font-family: sans-serif;
+   font-family: 'Kumbh Sans', sans-serif;
    font-size: 16px;
-   line-height: 1.5;
+   line-height: 26px;
+   color: var(--text-color);
+   background-image: #fff;
 }
 
 .container {
-   max-width: 1100px;
+   max-width: 1110px;
    width: 100%;
    margin: 0 auto;
 }
