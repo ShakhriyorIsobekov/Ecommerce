@@ -19,7 +19,6 @@
          <a href="#" class="site-header__logo logo">
             <img src="./img/sneakers.svg" alt="header logo" class="logo__img" width="137" height="20">
          </a>
-
          <nav class="site-header__sitenav sitenav">
             <ul class="sitenav__list">
                <li class="sitenav__item">
@@ -39,6 +38,58 @@
                </li>
             </ul>
          </nav>
+
+         <div class="site-header__card">
+            <a href="#" class="site-header__card-link " aria-label="shopping card">
+               <span class="site-header__card-product-count">3</span>
+               <svg class="site-header__card-icon" width="21.821" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 0 0 0 1.792h1l.136 1.512-.026-.292-.058-.65.98 10.913c.073.828.52 1.726 1.29 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.678 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM1.898 1.792l.046.522-.046-.522Zm2.695 9.984 13.801-.811 1.383-5.531H4.024l.57 6.342Zm.84 5.507a.926.926 0 0 0 1.85 0 .926.926 0 0 0-1.85 0Zm10.94.925a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Z" clip-rule="evenodd" fill="currentColor" fill-rule="evenodd"/></svg>
+            </a>
+
+            <!-- card-modal -->
+            <div class="site-header__card-modal">
+               <div class="shopping-card shopping-card-modal">
+                  <header class="shopping-card__header">
+                     <h2 class="shopping-card__title">
+                        Cart
+                     </h2>
+                  </header>
+                  <div class="shopping-card__inner ">
+                     <!-- empty -->
+                     <h4 class="shopping-card__empty">
+                        Your cart is empty
+                     </h4>
+
+                     <!-- has items -->
+                     <div class="shopping-card__content">
+                        <ul class="shopping-card-products">
+                           <li class="shopping-card-item">
+                              <div class="item-shopping-card-products">
+                                 <img src="./img/card-sneakers.png" alt="sneakers" class="item-shopping-card-products__img" width="50" height="50" srcset="./img/card-sneakers.png 1x, ./img/card-sneakers@2x.png 2x">
+                                 <div class="item-shopping-card-products__info">
+                                    <div class="item-shopping-card-products__name">
+                                       Fall Limited Edition Sneakers
+                                    </div>
+                                    <div class="item-shopping-card-products__cost">
+                                       $125.00 x 3 <b>$375.00</b>
+                                    </div>
+                                 </div>
+                                 <button class="item-shopping-card-products__remove-btn" type="button" aria-label="remove item">
+                                 <svg  width="14" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 1.75v.875C0 2.831.169 3 .375 3h13.25A.376.376 0 0 0 14 2.625V1.75a.748.748 0 0 0-.75-.75h-3.5L9.456.416A.75.75 0 0 0 8.784 0H5.213a.742.742 0 0 0-.67.416L4.25 1H.75a.748.748 0 0 0-.75.75Zm13 2.625V14.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 1 14.5V4.375C1 4.169 1.169 4 1.375 4h11.25c.206 0 .375.169.375.375ZM4 6c.275 0 .5.225.5.5v7c0 .275-.225.5-.5.5a.502.502 0 0 1-.5-.5v-7c0-.275.225-.5.5-.5Zm3.5.5c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7ZM10 6c.275 0 .5.225.5.5v7c0 .275-.225.5-.5.5a.502.502 0 0 1-.5-.5v-7c0-.275.225-.5.5-.5Z" clip-rule="evenodd" fill="currentColor" fill-rule="evenodd"/></svg>
+                                 </button>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="site-header__profile-wrapper">
+            <a href="#" class="site-header__profile-link">
+               <img src="./img/profile-ava.png" alt="profile-ava" class="site-header__profile-ava" width="50" height="50" srcset="./img/profile-ava.png 1x, ./img/profile-ava@2x.png">
+            </a>
+         </div>
       </div>
    </header>
    <!-- Header ends -->
