@@ -225,4 +225,66 @@ body {
 }
 
 
+/* shopping-card-products */
+
+.shopping-card__products {
+   margin-bottom: 24px;
+}
+
+.shopping-card-products__item:not(:last-child) {
+   margin-bottom: 16px;
+
+}
+
+.item-shopping-card-products {
+   display: flex;
+   align-items: flex-start;
+}
+
+.item-shopping-card-products__img {
+   flex-shrink: 0;
+   border-radius: 4px;
+   margin-right: 16px;
+   object-fit: cover;
+}
+
+.item-shopping-card-products__info {
+   flex-grow: 1;
+   margin-right: 18px;
+   overflow: hidden;
+   width: 100%;
+}
+
+.item-shopping-card-products__name {
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow: hidden;
+}
+
+.item-shopping-card-products__remove-btn {
+   border: none;
+   background-color: transparent;
+   color: #c3cad9;
+   align-self: center;
+   transition: all 0.2s ease;
+}
+
+.item-shopping-card-products__remove-btn:hover {
+   color: var(--text-color-dark);
+}
+
+.item-shopping-card-products__remove-btn:active {
+   opacity: 0.6;
+}
+
+.item-shopping-card-products__subtotal {
+   color: var(--text-color-dark);
+}
+
+.item-shopping-card-products__remove-icon {
+   display: block;
+   width: 14px;
+   height: 16px;
+}
+
 /* Header ends */
