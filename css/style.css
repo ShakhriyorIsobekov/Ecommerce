@@ -363,8 +363,25 @@ body {
 
 /* img-showcase */
 
+.img-showcase {
+   position: relative;
+}
+
 .img-showcase__showcase {
    margin-bottom: 32px;
+   position: relative;
+}
+
+.img-showcase__lightbox-toggle {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   border: 0;
+   background-color: transparent;
+   border-radius: 15px;
+   cursor: zoom-in;
 }
 
 .img-showcase__active-img {
@@ -377,6 +394,7 @@ body {
 .img-showcase__thumbnails {
    display: flex;
    align-items: center;
+   /* justify-content: center; */
    overflow: auto;
    column-gap: 31px;
 }
@@ -448,3 +466,108 @@ body {
 }
 
 /* Main ends */
+
+/* Lightbox starts */
+.lightbox {
+   display: none;
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.75);
+   overflow: auto;
+}
+
+.lightbox-open {
+   display: block;
+}
+
+.lightbox__inner {
+   margin: 90px auto;
+   max-width: 550px;
+   width: 100%;
+
+}
+
+.lightbox__close {
+   background-color: transparent;
+   border: none;
+   width: 20px;
+   height: 20px;
+   display: block;
+   margin-left: auto;
+   cursor: pointer;
+   color: #d8d8d8;
+   margin-bottom: 24px;
+}
+
+.lightbox__close-icon:hover {
+   color: var(--accent-color);
+}
+
+.lightbox__close-icon:active {
+   opacity: 0.6;
+}
+
+.lightbox__close-icon {
+   display: block;
+   width: 20px;
+   height: 20px;
+}
+
+/* Img-showcase controls */
+
+.img-showcase__control {
+   position: absolute;
+   z-index: 1;
+   top: 50%;
+   transform: translateY(-50%);
+   border: 0;
+   border-radius: 50%;
+   background-color: transparent;
+   border-radius: 50%;
+   cursor: pointer;
+
+}
+
+.img-showcase__control-inner {
+   width: 56px;
+   height: 56px;
+   background-color: #fff;
+   display: flex;
+   border-radius: 50%;
+   justify-content: center;
+   align-items: center;
+   color: var(--text-color-dark);
+}
+
+.img-showcase__control-inner:hover {
+   color: var(--accent-color);
+}
+
+.img-showccase__control-inner:active {
+   opacity: 0.6;
+}
+
+.img-showcase__prev {
+   left: -28px;
+}
+
+.img-showcase__next {
+   right: -28px;
+}
+
+.img-showcase__control-icon {
+   display: block;
+   width: 13px;
+   height: 20px;
+}
+
+.img-showcase-lightbox .img-showcase__active-img {
+   width: 550px;
+   height: 550px;
+   border-radius: 15px;
+}
+
+/* Lightbox ends */
