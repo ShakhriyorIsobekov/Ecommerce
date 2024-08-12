@@ -24,7 +24,7 @@ if (elCardLink) {
 // img-showcase__thumbnails
 const elShowcaseMainImg = document.querySelector(".img-showcase__active-img");
 const elsShowcaseItem = document.querySelectorAll(".img-showcase__thumbnail");
-const elsShowcaseButton = document.querySelectorAll(".img-showcase__thumbnail-button");
+const elsShowcaseButton = document.querySelectorAll(".js-showcase__thumbnail-button");
 
 // deactive img-showcase-item
 function deactiveShowcaseButtonActive () {
@@ -39,7 +39,7 @@ elsShowcaseButton.forEach(function(elShowcaseButton) {
       elShowcaseButton.parentElement.classList.add(modifiers.imgThumbnailActive);
 
       // change main img accordingly
-      elShowcaseMainImg.src = elShowcaseButton.dataset.imgShowcaseBig
+      elShowcaseMainImg.src = elShowcaseButton.dataset.imgShowcaseBig;
    });
 });
 
@@ -49,6 +49,10 @@ const elLightbox = document.querySelector('.lightbox');
 const elButtonLightbox = document.querySelector('.img-showcase__lightbox-toggle');
 const elLightboxClose = document.querySelector('.lightbox__close-icon');
 
+const elLightboxMainImg = elLightbox.querySelector('.img-showcase__active-img');
+const elsLightboxShowcaseButton = elLightbox.querySelectorAll('.js-img-lightbox-thumbnail-button');
+const elsLightboxImgThumbnail = elLightbox.querySelectorAll('.img-showcase__thumbnail');
+
 elButtonLightbox.addEventListener('click', function() {
    elLightbox.classList.add('lightbox-open');
 });
@@ -56,3 +60,69 @@ elButtonLightbox.addEventListener('click', function() {
 elLightboxClose.addEventListener('click', function() {
    elLightbox.classList.remove('lightbox-open');
 });
+
+// Function
+function deactiveLightboxButton () {
+   elsLightboxShowcaseButton.forEach(function(elLightboxShowcaseButton) {
+      elLightboxShowcaseButton.parentElement.classList.remove(modifiers.imgThumbnailActive)
+   })
+}
+
+elsLightboxShowcaseButton.forEach(function(elLightboxShowcaseButton) {
+   elLightboxShowcaseButton.addEventListener('click', function() {
+      deactiveLightboxButton();
+      elLightboxShowcaseButton.parentElement.classList.add(modifiers.imgThumbnailActive);
+      // Change main img accordingly
+      elLightboxMainImg.src = elLightboxShowcaseButton.dataset.imgShowcaseBig;
+   });
+
+});
+
+
+// Ligtbox Control
+
+const elLightboxControlPrev = elLightbox.querySelector('.js-ligthbox-control-prev');
+const elLightboxControlNext = elLightbox.querySelector('.js-ligthbox-control-next');
+const elLightboxButton = elLightbox.querySelector('.js-lightbox-first-btn');
+const elActiveItem = elLightbox.querySelector('.img-showcase__thumbnail-active');
+
+if(elLightboxControlNext) {
+   elLightboxControlNext.addEventListener('click', function() {
+      const elActiveItem = elLightbox.querySelector('.img-showcase__thumbnail-active');
+
+      // Remove active class when u pressing next
+      elActiveItem.classList.remove(modifiers.imgThumbnailActive);
+
+      // Change active when you press next
+      let elNextActiveItem;
+
+      if (elActiveItem.nextElementSibling === null) {
+         elNextActiveItem = elsLightboxImgThumbnail[0];
+      } else {
+         elNextActiveItem = elActiveItem.nextElementSibling;
+      }
+      elNextActiveItem.classList.add(modifiers.imgThumbnailActive);
+
+      elLightboxMainImg.src = elNextActiveItem.children[0].dataset.imgShowcaseBig;
+
+   });
+};
+
+if (elLightboxControlPrev) {
+   elLightboxControlPrev.addEventListener('click', function() {
+      const elActiveItem = elLightbox.querySelector('.img-showcase__thumbnail-active');
+
+      elActiveItem.classList.remove(modifiers.imgThumbnailActive);
+
+      let elPrevActiveItem;
+
+      if (elActiveItem.previousElementSibling === null) {
+         elPrevActiveItem = elsLightboxImgThumbnail[3];
+      } else {
+         elPrevActiveItem = elActiveItem.previousElementSibling;
+      }
+      elPrevActiveItem.classList.add(modifiers.imgThumbnailActive);
+
+      elLightboxMainImg.src = elPrevActiveItem.children[0].dataset.imgShowcaseBig;
+   });
+};
