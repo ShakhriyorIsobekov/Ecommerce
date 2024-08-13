@@ -146,7 +146,10 @@ if (elQuantityButtonPlus) {
 
 if (elQuantityButtonMinus) {
    elQuantityButtonMinus.addEventListener('click', function () {
-      // Minus one
-      elQuantityCount.textContent = parseInt(elQuantityCount.textContent, 10) - 1
+      const qyt = parseInt(elQuantityCount.textContent, 10);
+      if (qyt > 0) {
+         // Minus one
+         elQuantityCount.textContent = parseInt(elQuantityCount.textContent, 10) - 1
+      }
    })
 }
