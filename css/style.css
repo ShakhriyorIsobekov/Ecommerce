@@ -465,6 +465,109 @@ body {
    background-color: var(--deivder-bg);
 }
 
+/* Product Info */
+
+.product-page__info {
+   max-width: 445px;
+   width: 100%;
+}
+
+.product-info__manufacturer {
+   text-transform: uppercase;
+   color:var(--accent-color);
+   font-size: 13px;
+   line-height: normal;
+   font-weight: bold;
+   letter-spacing: 2px;
+   margin-bottom: 27px;
+}
+
+.product-info__title {
+   font-size: 44px;
+   line-height: 48px;
+   margin-bottom: 32px;
+   color: var(--text-color-dark);
+}
+
+.produc-info__description {
+   margin-bottom: 24px;
+}
+
+.produc-info__price-wrapper {
+   display: flex;
+   align-items: center;
+   margin-bottom: 10px;
+}
+
+.product-info__price {
+   font-size: 28px;
+   line-height: normal;
+   font-weight: bold;
+   color: var(--text-color-dark);
+   margin-right: 16px;
+}
+
+.badge {
+   display: inline-block;
+   border-radius: 6px;
+   background-color: var(--accent-color-light);
+   color: var(--accent-color);
+   font-size: 16px;
+   line-height: normal;
+   font-weight: bold;
+   padding: 4px 8px;
+}
+
+.product-info__old-price {
+   display: block;
+   color: #b6bcc8;
+   font-weight: bold;
+   text-decoration: line-through;
+   margin-bottom: 32px;
+}
+
+.product-info__card-actions {
+   display: flex;
+}
+
+.product-info__quantity-wrapper {
+   display: flex;
+   width: 156px;
+   background-color: var(--ligth-bg);
+   border-radius: 10px;
+   margin-right: 16px;
+}
+
+.product-info__quantity-button {
+   width: 52px;
+   border: none;
+   padding: 0;
+   background-color: transparent;
+   cursor: pointer;
+   font-size: 24px;
+   line-height: 24px;
+   color: var(--accent-color);
+   font-weight: bold;
+   transition: all 0.4s ease;
+}
+
+.product-info__quantity-button:hover {
+   color: var(--accent-color-hover);
+}
+
+.product-info__quantity-button:active {
+   opacity: 0.6;
+}
+
+.product-info__quantity {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 52px;
+   font-weight: bold;
+   line-height: normal;
+}
+
 /* Main ends */
 
 /* Lightbox starts */
@@ -568,9 +671,5 @@ body {
    width: 550px;
    height: 550px;
    border-radius: 15px;
-}
-
-.js-showcase__thumbnail-button {
-
 }
 /* Lightbox ends */

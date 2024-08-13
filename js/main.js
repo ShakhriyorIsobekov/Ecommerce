@@ -13,7 +13,7 @@ const elHeaderCardLink = document.querySelector(".site-header__card");
 
 if (elCardLink) {
    elHeaderCardLink.classList.remove('site-header__card-empty')
-   elCardLink.addEventListener('click', function(evt) {
+   elCardLink.addEventListener('click', function (evt) {
       evt.preventDefault();
       elCardModalOpen.classList.toggle('site-header__card-modal-open');
    });
@@ -22,19 +22,20 @@ if (elCardLink) {
 // -----------------------------------
 
 // img-showcase__thumbnails
-const elShowcaseMainImg = document.querySelector(".img-showcase__active-img");
-const elsShowcaseItem = document.querySelectorAll(".img-showcase__thumbnail");
-const elsShowcaseButton = document.querySelectorAll(".js-showcase__thumbnail-button");
+const elProductPageGallery = document.querySelector('.product-page__gallery')
+const elShowcaseMainImg = elProductPageGallery.querySelector(".img-showcase__active-img");
+const elsShowcaseItem = elProductPageGallery.querySelectorAll(".img-showcase__thumbnail");
+const elsShowcaseButton = elProductPageGallery.querySelectorAll(".js-showcase__thumbnail-button");
 
 // deactive img-showcase-item
-function deactiveShowcaseButtonActive () {
-   elsShowcaseButton.forEach(function(elShowcaseButton) {
+function deactiveShowcaseButtonActive() {
+   elsShowcaseButton.forEach(function (elShowcaseButton) {
       elShowcaseButton.parentElement.classList.remove(modifiers.imgThumbnailActive);
    });
 };
 
-elsShowcaseButton.forEach(function(elShowcaseButton) {
-   elShowcaseButton.addEventListener('click', function() {
+elsShowcaseButton.forEach(function (elShowcaseButton) {
+   elShowcaseButton.addEventListener('click', function () {
       deactiveShowcaseButtonActive();
       elShowcaseButton.parentElement.classList.add(modifiers.imgThumbnailActive);
 
@@ -53,23 +54,23 @@ const elLightboxMainImg = elLightbox.querySelector('.img-showcase__active-img');
 const elsLightboxShowcaseButton = elLightbox.querySelectorAll('.js-img-lightbox-thumbnail-button');
 const elsLightboxImgThumbnail = elLightbox.querySelectorAll('.img-showcase__thumbnail');
 
-elButtonLightbox.addEventListener('click', function() {
+elButtonLightbox.addEventListener('click', function () {
    elLightbox.classList.add('lightbox-open');
 });
 
-elLightboxClose.addEventListener('click', function() {
+elLightboxClose.addEventListener('click', function () {
    elLightbox.classList.remove('lightbox-open');
 });
 
 // Function
-function deactiveLightboxButton () {
-   elsLightboxShowcaseButton.forEach(function(elLightboxShowcaseButton) {
+function deactiveLightboxButton() {
+   elsLightboxShowcaseButton.forEach(function (elLightboxShowcaseButton) {
       elLightboxShowcaseButton.parentElement.classList.remove(modifiers.imgThumbnailActive)
    })
 }
 
-elsLightboxShowcaseButton.forEach(function(elLightboxShowcaseButton) {
-   elLightboxShowcaseButton.addEventListener('click', function() {
+elsLightboxShowcaseButton.forEach(function (elLightboxShowcaseButton) {
+   elLightboxShowcaseButton.addEventListener('click', function () {
       deactiveLightboxButton();
       elLightboxShowcaseButton.parentElement.classList.add(modifiers.imgThumbnailActive);
       // Change main img accordingly
@@ -86,8 +87,8 @@ const elLightboxControlNext = elLightbox.querySelector('.js-ligthbox-control-nex
 const elLightboxButton = elLightbox.querySelector('.js-lightbox-first-btn');
 const elActiveItem = elLightbox.querySelector('.img-showcase__thumbnail-active');
 
-if(elLightboxControlNext) {
-   elLightboxControlNext.addEventListener('click', function() {
+if (elLightboxControlNext) {
+   elLightboxControlNext.addEventListener('click', function () {
       const elActiveItem = elLightbox.querySelector('.img-showcase__thumbnail-active');
 
       // Remove active class when u pressing next
@@ -109,7 +110,7 @@ if(elLightboxControlNext) {
 };
 
 if (elLightboxControlPrev) {
-   elLightboxControlPrev.addEventListener('click', function() {
+   elLightboxControlPrev.addEventListener('click', function () {
       const elActiveItem = elLightbox.querySelector('.img-showcase__thumbnail-active');
 
       elActiveItem.classList.remove(modifiers.imgThumbnailActive);
@@ -126,3 +127,26 @@ if (elLightboxControlPrev) {
       elLightboxMainImg.src = elPrevActiveItem.children[0].dataset.imgShowcaseBig;
    });
 };
+
+// Quantity buttons
+
+const elQuantityButtonMinus = document.querySelector('.js-product-info__quantity-button-minus');
+const elQuantityButtonPlus = document.querySelector('.js-product-info__quantity-button-plus');
+const elQuantityCount = document.querySelector('.product-info__quantity');
+
+age = 0
+
+if (elQuantityButtonPlus) {
+   elQuantityButtonPlus.addEventListener('click', function () {
+      // Plus one
+      elQuantityCount.textContent = parseInt(elQuantityCount.textContent, 10) + 1
+
+   });
+};
+
+if (elQuantityButtonMinus) {
+   elQuantityButtonMinus.addEventListener('click', function () {
+      // Minus one
+      elQuantityCount.textContent = parseInt(elQuantityCount.textContent, 10) - 1
+   })
+}
