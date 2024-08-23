@@ -9,6 +9,7 @@
    <link rel="icon" href="./img/sneakers.svg">
    <link rel="stylesheet" href="css/normalize.css">
    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
@@ -20,7 +21,7 @@
             <img src="./img/sneakers.svg" alt="header logo" class="logo__img" width="137" height="20">
          </a>
          <nav class="site-header__sitenav sitenav">
-            <ul class="sitenav__list">
+            <ul class="sitenav__list sitenav__list-none">
                <li class="sitenav__item">
                   <a href="#" class="sitenav__link">Collections</a>
                </li>
@@ -38,8 +39,7 @@
                </li>
             </ul>
          </nav>
-
-         <div class="site-header__card ">
+         <div class="site-header__card">
             <a href="#" class="site-header__card-link js-site-header-card-link" aria-label="shopping card">
                <span class="site-header__card-product-count">3</span>
                <svg class="site-header__card-icon" width="21.821" height="20" fill="none"
@@ -109,6 +109,9 @@
                <img src="./img/profile-ava.png" alt="profile-ava" class="site-header__profile-ava" width="50"
                   height="50" srcset="./img/profile-ava.png 1x, ./img/profile-ava@2x.png">
             </a>
+            <div class="site-header__menu menu">
+               <img class="site-header__manu-icon" src="./img/bars-solid.svg" alt="menu icon" width="30" height="30">
+            </div>
          </div>
       </div>
    </header>
@@ -130,8 +133,8 @@
                </div>
                <ul class="img-showcase__thumbnails">
                   <li class="img-showcase__thumbnail img-showcase__thumbnail-active">
-                     <button class="img-showcase__thumbnail-button js-showcase__thumbnail-button" type="button" aria-label="img one"
-                        data-img-showcase-big="img/hero-sneakers-first.png"
+                     <button class="img-showcase__thumbnail-button js-showcase__thumbnail-button" type="button"
+                        aria-label="img one" data-img-showcase-big="img/hero-sneakers-first.png"
                         data-img-showcase-retina="img/hero-sneakers-first.png">
                         <img src="./img/hero-sneakers-white.png" alt="Sneakers" class="img-showcase__thumbnail-img"
                            width="88" height="88">
@@ -139,8 +142,8 @@
                   </li>
 
                   <li class="img-showcase__thumbnail">
-                     <button class="img-showcase__thumbnail-button js-showcase__thumbnail-button" type="button" aria-label="img two"
-                        data-img-showcase-big="img/squoosh-second.jpg"
+                     <button class="img-showcase__thumbnail-button js-showcase__thumbnail-button" type="button"
+                        aria-label="img two" data-img-showcase-big="img/squoosh-second.jpg"
                         data-img-showcase-retina="img/squoosh-second@2x.jpg">
                         <img src="./img/hero-sneakers-second.png" alt="Sneakers" class="img-showcase__thumbnail-img"
                            width="88" height="88">
@@ -148,8 +151,8 @@
                   </li>
 
                   <li class="img-showcase__thumbnail">
-                     <button class="img-showcase__thumbnail-button js-showcase__thumbnail-button" type="button" aria-label="img three"
-                        data-img-showcase-big="img/squoosh-third.jpg"
+                     <button class="img-showcase__thumbnail-button js-showcase__thumbnail-button" type="button"
+                        aria-label="img three" data-img-showcase-big="img/squoosh-third.jpg"
                         data-img-showcase-retina="img/squoosh-third@2x.jpg">
                         <img src="./img/hero-sneakers-third.png" alt="Sneakers" class="img-showcase__thumbnail-img"
                            width="88" height="88">
@@ -157,8 +160,8 @@
                   </li>
 
                   <li class="img-showcase__thumbnail">
-                     <button class="img-showcase__thumbnail-button js-showcase__thumbnail-button" type="button" aria-label="img four"
-                        data-img-showcase-big="img/squoosh-fourth.jpg"
+                     <button class="img-showcase__thumbnail-button js-showcase__thumbnail-button" type="button"
+                        aria-label="img four" data-img-showcase-big="img/squoosh-fourth.jpg"
                         data-img-showcase-retina="img/squoosh-fourth@2x.jpg">
                         <img src="./img/hero-sneakers-fourth.png" alt="Sneakers" class="img-showcase__thumbnail-img"
                            width="88" height="88">
@@ -178,7 +181,8 @@
                      Fall Limited Edition Sneakers
                   </h1>
                   <p class="produc-info__description">
-                     These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
+                     These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer
+                     sole, they’ll withstand everything the weather can offer.
                   </p>
                   <div class="produc-info__price-wrapper">
                      <b class="product-info__price">$125.00</b>
@@ -187,14 +191,21 @@
                   <del class="product-info__old-price">$250.00</del>
                   <div class="product-info__card-actions">
                      <div class="product-info__quantity-wrapper">
-                        <button class="product-info__quantity-button js-product-info__quantity-button-minus" type="button" aria-label="minus one">-</button>
+                        <button class="product-info__quantity-button js-product-info__quantity-button-minus"
+                           type="button" aria-label="minus one">-</button>
                         <div class="product-info__quantity">0</div>
-                        <button class="product-info__quantity-button js-product-info__quantity-button-plus" type="button" aria-label="plus one">+</button>
+                        <button class="product-info__quantity-button js-product-info__quantity-button-plus"
+                           type="button" aria-label="plus one">+</button>
                      </div>
                      <button class="button button-wide">
                         <span class="button__inner">
                            <span class="button__prepend">
-                              <svg class="button__icon" width="21.821" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 0 0 0 1.792h1l.136 1.512-.026-.292-.058-.65.98 10.913c.073.828.52 1.726 1.29 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.678 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM1.898 1.792l.046.522-.046-.522Zm2.695 9.984 13.801-.811 1.383-5.531H4.024l.57 6.342Zm.84 5.507a.926.926 0 0 0 1.85 0 .926.926 0 0 0-1.85 0Zm10.94.925a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Z" clip-rule="evenodd" fill="currentColor" fill-rule="evenodd"/></svg>
+                              <svg class="button__icon" width="21.821" height="20" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 0 0 0 1.792h1l.136 1.512-.026-.292-.058-.65.98 10.913c.073.828.52 1.726 1.29 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.678 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM1.898 1.792l.046.522-.046-.522Zm2.695 9.984 13.801-.811 1.383-5.531H4.024l.57 6.342Zm.84 5.507a.926.926 0 0 0 1.85 0 .926.926 0 0 0-1.85 0Zm10.94.925a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Z"
+                                    clip-rule="evenodd" fill="currentColor" fill-rule="evenodd" />
+                              </svg>
                            </span>
                            <span class="button__text">Add to cart</span>
                         </span>
@@ -224,7 +235,8 @@
          </button>
          <div class="img-showcase img-showcase-lightbox">
             <!-- img showcase controls -->
-            <button class="img-showcase__control img-showcase__prev js-ligthbox-control-prev" type="button" aria-label="previous">
+            <button class="img-showcase__control img-showcase__prev js-ligthbox-control-prev" type="button"
+               aria-label="previous">
                <span class="img-showcase__control-inner">
                   <svg class="img-showcase__control-icon" width="11.182" height="18.121" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
@@ -232,7 +244,8 @@
                   </svg>
                </span>
             </button>
-            <button class="img-showcase__control img-showcase__next js-ligthbox-control-next" type="button" aria-label="next">
+            <button class="img-showcase__control img-showcase__next js-ligthbox-control-next" type="button"
+               aria-label="next">
                <span class="img-showcase__control-inner">
                   <svg class="img-showcase__control-icon" width="11.182" height="18.121" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
@@ -247,8 +260,8 @@
          </div>
          <ul class="img-showcase__thumbnails">
             <li class="img-showcase__thumbnail img-showcase__thumbnail-active">
-               <button class="img-showcase__thumbnail-button js-img-lightbox-thumbnail-button" type="button" aria-label="img one"
-                  data-img-showcase-big="img/hero-sneakers-first.png"
+               <button class="img-showcase__thumbnail-button js-img-lightbox-thumbnail-button" type="button"
+                  aria-label="img one" data-img-showcase-big="img/hero-sneakers-first.png"
                   data-img-showcase-retina="img/hero-sneakers-first.png">
                   <img src="./img/hero-sneakers-white.png" alt="Sneakers" class="img-showcase__thumbnail-img" width="88"
                      height="88">
@@ -256,24 +269,27 @@
             </li>
 
             <li class="img-showcase__thumbnail">
-               <button class="img-showcase__thumbnail-button js-img-lightbox-thumbnail-button" type="button" aria-label="img two"
-                  data-img-showcase-big="img/squoosh-second.jpg" data-img-showcase-retina="img/squoosh-second@2x.jpg">
+               <button class="img-showcase__thumbnail-button js-img-lightbox-thumbnail-button" type="button"
+                  aria-label="img two" data-img-showcase-big="img/squoosh-second.jpg"
+                  data-img-showcase-retina="img/squoosh-second@2x.jpg">
                   <img src="./img/hero-sneakers-second.png" alt="Sneakers" class="img-showcase__thumbnail-img"
                      width="88" height="88">
                </button>
             </li>
 
             <li class="img-showcase__thumbnail">
-               <button class="img-showcase__thumbnail-button js-img-lightbox-thumbnail-button" type="button" aria-label="img three"
-                  data-img-showcase-big="img/squoosh-third.jpg" data-img-showcase-retina="img/squoosh-third@2x.jpg">
+               <button class="img-showcase__thumbnail-button js-img-lightbox-thumbnail-button" type="button"
+                  aria-label="img three" data-img-showcase-big="img/squoosh-third.jpg"
+                  data-img-showcase-retina="img/squoosh-third@2x.jpg">
                   <img src="./img/hero-sneakers-third.png" alt="Sneakers" class="img-showcase__thumbnail-img" width="88"
                      height="88">
                </button>
             </li>
 
             <li class="img-showcase__thumbnail">
-               <button class="img-showcase__thumbnail-button js-img-lightbox-thumbnail-button" type="button" aria-label="img four"
-                  data-img-showcase-big="img/squoosh-fourth.jpg" data-img-showcase-retina="img/squoosh-fourth@2x.jpg">
+               <button class="img-showcase__thumbnail-button js-img-lightbox-thumbnail-button" type="button"
+                  aria-label="img four" data-img-showcase-big="img/squoosh-fourth.jpg"
+                  data-img-showcase-retina="img/squoosh-fourth@2x.jpg">
                   <img src="./img/hero-sneakers-fourth.png" alt="Sneakers" class="img-showcase__thumbnail-img"
                      width="88" height="88">
                </button>

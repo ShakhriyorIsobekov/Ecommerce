@@ -153,3 +153,14 @@ if (elQuantityButtonMinus) {
       }
    })
 }
+
+// Toggler Menu
+
+const elMenuIcon = document.querySelector('.site-header__menu');
+const elSitenavList = document.querySelector('.sitenav__list')
+
+if(elMenuIcon) {
+   elMenuIcon.addEventListener('click', function() {
+      elSitenavList.classList.toggle('sitenav__list-none')
+   });
+};

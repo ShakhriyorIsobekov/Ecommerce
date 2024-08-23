@@ -1,0 +1,51 @@
+@media screen and (max-width: 750px) {
+
+   .site-header__container {
+      padding: 20px 0;
+   }
+
+   .sitenav__list {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      background-color: #222;
+      opacity: 0.8;
+      flex-direction: column;
+   }
+
+   .sitenav__list-none {
+      display: none;
+   }
+
+   .sitenav__item {
+      padding: 8px 0;
+   }
+
+   .sitenav__link {
+      color: #fff;
+   }
+
+   .sitenav__link:hover {
+      color: #fff;
+   }
+
+   .sitenav__link:active {
+      color: #ffeee2;
+   }
+
+   .site-header__menu {
+      display: block;
+   }
+
+   .site-header__logo {
+      margin-right: 0;
+   }
+}
+
+@media screen and (max-width: 400px) {
+   .site-header__container {
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+}
