@@ -404,12 +404,6 @@ body {
    width: 100%;
    margin-right: 30px;
 }
-
-.product-page__info {
-   max-width: 445px;
-   width: 100%;
-}
-
 /* img-showcase */
 
 .img-showcase {
@@ -435,8 +429,8 @@ body {
 
 .img-showcase__active-img {
    display: block;
-   width: 445px;
-   height: 445px;
+   width: 100%;
+   height: auto;
    object-fit: cover;
 }
 
